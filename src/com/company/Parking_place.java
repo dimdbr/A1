@@ -29,7 +29,7 @@ public class Parking_place {
         this.is_occupied = is_occupied;
     }
 
-    public void setPlace_owner(Client place_owner) {
+    /*public void setPlace_owner(Client place_owner) {
         this.place_owner = place_owner;
-    }
+    }*/
 }

@@ -1,11 +1,11 @@
 package com.company;
 
-public class Tariff implements I_Tariff{
+public class Tariff {
     private double place_price;
     private  double water_tariff;
     private  double electricity_tariff;
     private  double gas_tariff;
-    private  double extra_pay;
+    private  double extra_pay;//убрать
 
     public Tariff() {
     }
@@ -37,9 +37,6 @@ public class Tariff implements I_Tariff{
     public double getExtra_pay() {
         return extra_pay;
     }
-    public  void change_tariff()
-    {
 
-    }
 
 }

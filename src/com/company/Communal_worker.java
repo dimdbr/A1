@@ -3,18 +3,19 @@ package com.company;
 public class Communal_worker extends Worker{
     private CW_type type;
     private boolean is_winter;
-    private double fix_problem_value;//комунальщики это наемные рабочие раз в месяц, они сами назначают стоимость их нештатных услуг
-    public Communal_worker(String name, double salary, CW_type type) {
+    private Malfunction malfunction;
+
+    public Communal_worker(String name, double salary, CW_type type, boolean is_winter) {
         super(name, salary);
         this.type = type;
+        this.is_winter = is_winter;
+        this.malfunction = null;
     }
 
-    public double getFix_problem_value() {
-        return fix_problem_value;
-    }
-
-    public void setFix_problem_value(double fix_problem_value) {
-        this.fix_problem_value = fix_problem_value;
+    public Communal_worker(CW_type type, boolean is_winter) {
+        this.type = type;
+        this.is_winter = is_winter;
+        this.malfunction = null;
     }
 
     public boolean get_is_winter() {
@@ -31,6 +32,10 @@ public class Communal_worker extends Worker{
 
     public CW_type getType() {
         return type;
+    }
+
+    public void setMalfunction(Malfunction malfunction) {
+        this.malfunction = malfunction;
     }
 
     @Override
