@@ -39,4 +39,12 @@ public class Owner  {
     {
 
     }*/
+
+    @Override
+    public String toString() {
+        return "Owner{" +
+                "name='" + name + '\'' +
+                ", current_account=" + current_account +
+                '}';
+    }
 }

@@ -11,7 +11,7 @@ public class Client {
 
     public Client(String name, double month_pay) {
         this.name = name;
-        this.month_pay = 0;
+        this.month_pay = month_pay;
         this.contract = new Contract();
     }
 

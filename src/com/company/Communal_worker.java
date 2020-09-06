@@ -38,6 +38,14 @@ public class Communal_worker extends Worker{
         this.malfunction = malfunction;
     }
 
+    public boolean isIs_winter() {
+        return is_winter;
+    }
+
+    public Malfunction getMalfunction() {
+        return malfunction;
+    }
+
     @Override
     public void do_a_work() {
         System.out.println("Doing communal job");

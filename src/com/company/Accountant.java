@@ -13,7 +13,14 @@ public class Accountant extends Worker {
     public Accountant(ArrayList<Client> clients_under_acc) {
         this.clients_under_acc = clients_under_acc;
     }
-    public  void calc_month_pay(ArrayList<Client> clients,Tariff tariff)
+
+    public ArrayList<Client> getClients_under_acc() {
+        return clients_under_acc;
+    }
+
+
+
+    public  void calc_month_pay(ArrayList<Client> clients, Tariff tariff)
     {
 
 

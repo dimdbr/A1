@@ -48,4 +48,14 @@ public class Tariff {
     public void setGas_tariff(double gas_tariff) {
         this.gas_tariff = gas_tariff;
     }
+
+    @Override
+    public String toString() {
+        return "Tariff{" +
+                "place_price=" + place_price +
+                ", water_tariff=" + water_tariff +
+                ", electricity_tariff=" + electricity_tariff +
+                ", gas_tariff=" + gas_tariff +
+                '}';
+    }
 }
