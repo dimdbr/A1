@@ -5,7 +5,7 @@ public class Tariff {
     private  double water_tariff;
     private  double electricity_tariff;
     private  double gas_tariff;
-    private  double extra_pay;//убрать
+
 
     public Tariff() {
     }
@@ -33,10 +33,19 @@ public class Tariff {
     }
 
 
-
-    public double getExtra_pay() {
-        return extra_pay;
+    public void setPlace_price(double place_price) {
+        this.place_price = place_price;
     }
 
+    public void setWater_tariff(double water_tariff) {
+        this.water_tariff = water_tariff;
+    }
 
+    public void setElectricity_tariff(double electricity_tariff) {
+        this.electricity_tariff = electricity_tariff;
+    }
+
+    public void setGas_tariff(double gas_tariff) {
+        this.gas_tariff = gas_tariff;
+    }
 }

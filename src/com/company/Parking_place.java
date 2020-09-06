@@ -12,7 +12,17 @@ public class Parking_place {
         this.is_occupied = is_occupied;
         this.place_owner = place_owner;
     }
+    public Parking_place(int id_p_p, boolean is_occupied) {
+        this.id_p_p = id_p_p;
+        this.is_occupied = is_occupied;
 
+    }
+    public  Parking_place()
+    {
+        this.id_p_p = 0;
+        this.is_occupied=false;
+        this.place_owner = new Client();
+    }
     public int getId_p_p() {
         return id_p_p;
     }
@@ -29,7 +39,16 @@ public class Parking_place {
         this.is_occupied = is_occupied;
     }
 
-    /*public void setPlace_owner(Client place_owner) {
+    public void setPlace_owner(Client place_owner) {
         this.place_owner = place_owner;
-    }*/
+    }
+
+    @Override
+    public String toString() {
+        return "Parking_place{" +
+                "id_p_p=" + id_p_p +
+                ", is_occupied=" + is_occupied +
+
+                '}';
+    }
 }
