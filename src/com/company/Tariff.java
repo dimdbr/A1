@@ -1,68 +1,68 @@
 package com.company;
 
 public class Tariff {
-    private double place_price;
-    private  double water_tariff;
-    private  double electricity_tariff;
-    private  double gas_tariff;
+    private double placePrice;
+    private  double waterTariff;
+    private  double electricityTariff;
+    private  double gasTariff;
 
 
     public Tariff() {
     }
 
-    public Tariff(double place_price, double water_tariff, double electricity_tariff, double gas_tariff) {
-        this.place_price = place_price;
-        this.water_tariff = water_tariff;
-        this.electricity_tariff = electricity_tariff;
-        this.gas_tariff = gas_tariff;
+    public Tariff(double placePrice, double water_tariff, double electricityTariff, double gasTariff) {
+        this.placePrice = placePrice;
+        this.waterTariff = water_tariff;
+        this.electricityTariff = electricityTariff;
+        this.gasTariff = gasTariff;
     }
 
-    public double getPlace_price() {
-        return place_price;
-    }
-
-
-
-    public double getWater_tariff() {
-        return water_tariff;
+    public double getPlacePrice() {
+        return placePrice;
     }
 
 
 
-    public double getElectricity_tariff() {
-        return electricity_tariff;
+    public double getWaterTariff() {
+        return waterTariff;
     }
 
 
 
-    public double getGas_tariff() {
-        return gas_tariff;
+    public double getElectricityTariff() {
+        return electricityTariff;
     }
 
 
-    public void setPlace_price(double place_price) {
-        this.place_price = place_price;
+
+    public double getGasTariff() {
+        return gasTariff;
     }
 
-    public void setWater_tariff(double water_tariff) {
-        this.water_tariff = water_tariff;
+
+    public void setPlacePrice(double placePrice) {
+        this.placePrice = placePrice;
     }
 
-    public void setElectricity_tariff(double electricity_tariff) {
-        this.electricity_tariff = electricity_tariff;
+    public void setWaterTariff(double water_tariff) {
+        this.waterTariff = water_tariff;
     }
 
-    public void setGas_tariff(double gas_tariff) {
-        this.gas_tariff = gas_tariff;
+    public void setElectricityTariff(double electricityTariff) {
+        this.electricityTariff = electricityTariff;
+    }
+
+    public void setGasTariff(double gasTariff) {
+        this.gasTariff = gasTariff;
     }
 
     @Override
     public String toString() {
         return "Tariff{" +
-                "place_price=" + place_price +
-                ", water_tariff=" + water_tariff +
-                ", electricity_tariff=" + electricity_tariff +
-                ", gas_tariff=" + gas_tariff +
+                "place_price=" + placePrice +
+                ", water_tariff=" + waterTariff +
+                ", electricity_tariff=" + electricityTariff +
+                ", gas_tariff=" + gasTariff +
                 '}';
     }
 }

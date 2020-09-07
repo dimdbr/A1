@@ -7,24 +7,24 @@ import java.util.Date;
 public class Client {
     private String name;
     private Contract contract;
-    private double month_pay;
+    private double monthPay;
 
-    public Client(String name, double month_pay) {
+    public Client(String name, double monthPay) {
         this.name = name;
-        this.month_pay = month_pay;
+        this.monthPay = monthPay;
         this.contract = new Contract();
     }
 
-    public Client(String name,double month_pay, Contract contract)
+    public Client(String name,double monthPay, Contract contract)
     {
         this.name = name;
-        this.month_pay = month_pay;
+        this.monthPay = monthPay;
         this.contract = contract;
     }
     public Client()
     {
         this.name = "";
-        this.month_pay = 0;
+        this.monthPay = 0;
 
     }
     public String getName() {
@@ -35,12 +35,12 @@ public class Client {
         return contract;
     }
 
-    public double getMonth_pay() {
-        return month_pay;
+    public double getMonthPay() {
+        return monthPay;
     }
 
-    public void setMonth_pay(double month_pay) {
-        this.month_pay = month_pay;
+    public void setMonthPay(double month_pay) {
+        this.monthPay = month_pay;
     }
 
     public void setContract(Contract contract) {
@@ -52,7 +52,7 @@ public class Client {
         return "Client{" +
                 "name='" + name + '\'' +
                 ", contract=" + contract +
-                ", month_pay=" + month_pay +
+                ", month_pay=" + monthPay +
                 '}';
     }
 }

@@ -2,16 +2,16 @@ package com.company;
 
 public class Owner  {
     private String name;
-    private double current_account;
+    private double currentAccount;
 
 
-    public Owner(String name, double current_account) {
+    public Owner(String name, double currentAccount) {
         this.name = name;
-        this.current_account = current_account;
+        this.currentAccount = currentAccount;
     }
     Owner() {
         name = "";
-        current_account = 0D;
+        currentAccount = 0D;
     }
 
     public String getName() {
@@ -19,13 +19,13 @@ public class Owner  {
     }
 
     public double getSalary() {
-        return current_account;
+        return currentAccount;
     }
 
 
     public void getMoney(double sum)
     {
-        current_account+=sum;
+        currentAccount+=sum;
     }
    /* public static Tariff change_tariff(Tariff tariff)
     {
@@ -42,7 +42,7 @@ public class Owner  {
     public String toString() {
         return "Owner{" +
                 "name='" + name + '\'' +
-                ", current_account=" + current_account +
+                ", current_account=" + currentAccount +
                 '}';
     }
 

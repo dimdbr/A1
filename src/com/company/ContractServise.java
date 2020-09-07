@@ -6,18 +6,19 @@ import java.awt.image.VolatileImage;
 import java.security.cert.CertificateParsingException;
 import java.util.ArrayList;
 
-public class Contract_servise {
+public class ContractServise {
     private Owner owner;
     private ArrayList<Client> clients;
-    private ArrayList<Communal_worker>communal_workers;
+    private ArrayList<CommunalWorker>communalWorkers;
 
-    public Contract_servise(Owner owner, ArrayList<Client> clients,ArrayList<Communal_worker> communal_workers) {
+    public ContractServise(Owner owner, ArrayList<Client> clients,ArrayList<CommunalWorker> communal_workers) {
         this.owner = owner;
         this.clients = clients;
-        this.communal_workers = communal_workers;
+        this.communalWorkers = communal_workers;
+        System.out.println("Сознан сервис ");
     }
 
-    public Contract_servise(Object object, ArrayList<Client> clients) {
+    public ContractServise(Object object, ArrayList<Client> clients) {
         if (object instanceof Owner) {
             this.owner = (Owner) object;
             this.clients = clients;
@@ -44,10 +45,10 @@ public class Contract_servise {
         this.clients = clients;
     }
 
-    public void add_client_p_p(Client client, Parking_place parking_place) {
+    public void add_client_p_p(Client client, ParkingPlace parking_place) {
         Contract contract = client.getContract();
         if (parking_place.isIs_occupied()==false) {
-            ArrayList<Parking_place> parking_places = contract.getOccupied_places();
+            ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
             parking_place.setIs_occupied(true);
             parking_places.add(parking_place);
             contract.setOccupied_places(parking_places);
@@ -58,9 +59,10 @@ public class Contract_servise {
         {
             System.out.println("this parking place is already occupied");
         }
+
     }
 
-    public void add_client_car(Client client, String car_number)
+    public void add_client_car(Client client, String car_number) throws NullPointerException
     {
         Contract contract = client.getContract();
         ArrayList<String> registered_cars  = contract.getRegistered_cars();
@@ -71,9 +73,9 @@ public class Contract_servise {
         client.setContract(contract);
     }
 
-    public void remove_client_p_p(Client client, Parking_place parking_place) {
+    public void remove_client_p_p(Client client, ParkingPlace parking_place) {
         Contract contract = client.getContract();
-        ArrayList<Parking_place> parking_places = contract.getOccupied_places();
+        ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
         parking_places.remove(parking_place);
         parking_place.setIs_occupied(false);
 
@@ -93,9 +95,9 @@ public class Contract_servise {
     public void collect_money() {
         double income = 0;
         for (Client client : clients) {
-            income += client.getMonth_pay() * client.getContract().getOccupied_places().size();
+            income += client.getMonthPay() * client.getContract().getOccupied_places().size();
         }
-        for(Communal_worker communal_worker:communal_workers)
+        for(CommunalWorker communal_worker:communalWorkers)
         {
             income-=communal_worker.getSalary();
         }

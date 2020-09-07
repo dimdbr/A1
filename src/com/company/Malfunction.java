@@ -1,32 +1,32 @@
 package com.company;
 
 public class Malfunction {
-    private String malf_name;
+    private String malfName;
 
-    private double fix_price;
+    private double fixPrice;
     public Malfunction()
     {
-    this.malf_name ="";
-    this.fix_price =0D;
+    this.malfName ="";
+    this.fixPrice =0D;
     }
-    public Malfunction(String malf_name, double fix_price) {
-        this.malf_name = malf_name;
-        this.fix_price = fix_price;
-    }
-
-    public String getMalf_name() {
-        return malf_name;
+    public Malfunction(String malfName, double fixPrice) {
+        this.malfName = malfName;
+        this.fixPrice = fixPrice;
     }
 
-    public void setMalf_name(String malf_name) {
-        this.malf_name = malf_name;
+    public String getMalfName() {
+        return malfName;
     }
 
-    public double getFix_price() {
-        return fix_price;
+    public void setMalfName(String malfName) {
+        this.malfName = malfName;
     }
 
-    public void setFix_price(double fix_price) {
-        this.fix_price = fix_price;
+    public double getFixPrice() {
+        return fixPrice;
+    }
+
+    public void setFixPrice(double fixPrice) {
+        this.fixPrice = fixPrice;
     }
 }

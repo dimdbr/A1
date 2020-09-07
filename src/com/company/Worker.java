@@ -21,9 +21,6 @@ public class Worker {
     public double getSalary() {
         return salary;
     }
-    public void do_a_work()
-    {
 
-    }
 
 }

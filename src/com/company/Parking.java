@@ -4,26 +4,26 @@ import java.util.ArrayList;
 
 public class Parking {
     private ArrayList<Client> clients;
-    private ArrayList<Parking_place> parking_places;
+    private ArrayList<ParkingPlace> parkingPlaces;
     private Owner owner;
-    private ArrayList<Communal_worker> c_workers;
+    private ArrayList<CommunalWorker> cWorkers;
     private ArrayList<Accountant> accountants;
     private  boolean open;
     Parking()
     {
         clients = null;
-        parking_places = null;
+        parkingPlaces = null;
         owner = null;
-        c_workers = null;
+        cWorkers = null;
         accountants = null;
         open = false;
     }
 
-    public Parking(ArrayList<Client> clients, ArrayList<Parking_place> parking_places, Owner owner, ArrayList<Communal_worker> c_workers, ArrayList<Accountant> accountants, boolean is_open) {
+    public Parking(ArrayList<Client> clients, ArrayList<ParkingPlace> parkingPlaces, Owner owner, ArrayList<CommunalWorker> cWorkers, ArrayList<Accountant> accountants, boolean is_open) {
         this.clients = clients;
-        this.parking_places = parking_places;
+        this.parkingPlaces = parkingPlaces;
         this.owner = owner;
-        this.c_workers = c_workers;
+        this.cWorkers = cWorkers;
         this.accountants = accountants;
         this.open = is_open;
     }
@@ -40,20 +40,20 @@ public class Parking {
         this.clients = clients;
     }
 
-    public ArrayList<Parking_place> getParking_places() {
-        return parking_places;
+    public ArrayList<ParkingPlace> getParkingPlaces() {
+        return parkingPlaces;
     }
 
-    public void setParking_places(ArrayList<Parking_place> parking_places) {
-        this.parking_places = parking_places;
+    public void setParking_places(ArrayList<ParkingPlace> parkingPlaces) {
+        this.parkingPlaces = parkingPlaces;
     }
 
-    public ArrayList<Communal_worker> getC_workers() {
-        return c_workers;
+    public ArrayList<CommunalWorker> getC_workers() {
+        return cWorkers;
     }
 
-    public void setC_workers(ArrayList<Communal_worker> c_workers) {
-        this.c_workers = c_workers;
+    public void setC_workers(ArrayList<CommunalWorker> c_workers) {
+        this.cWorkers = c_workers;
     }
 
     public ArrayList<Accountant> getAccountants() {

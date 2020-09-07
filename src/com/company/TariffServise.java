@@ -2,16 +2,16 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Tariff_servise {
+public class TariffServise {
     private Tariff tariff;
     private Owner owner;
 
-    public Tariff_servise(Tariff tariff, Owner owner) {
+    public TariffServise(Tariff tariff, Owner owner) {
         this.tariff = tariff;
         this.owner = owner;
     }
 
-    public Tariff_servise(Object object, Tariff tariff) {
+    public TariffServise(Object object, Tariff tariff) {
         if (object instanceof Owner) {
             this.owner = (Owner) object;
             this.tariff = tariff;
@@ -31,13 +31,13 @@ public class Tariff_servise {
         return owner;
     }*/
 
-    public void change_tariff(double rent, double water, double electricity, double gas)
+    public void changeTariff(double rent, double water, double electricity, double gas)
     {
-        tariff.setPlace_price(rent);
-        tariff.setWater_tariff(water);
-        tariff.setElectricity_tariff(electricity);
+        tariff.setPlacePrice(rent);
+        tariff.setWaterTariff(water);
+        tariff.setElectricityTariff(electricity);
 
-        tariff.setGas_tariff(gas);
+        tariff.setGasTariff(gas);
         System.out.println("tariff changed to"+tariff);
     }
 

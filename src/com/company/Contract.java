@@ -4,67 +4,67 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 public class Contract {
-    private UUID client_id;
+    private UUID clientId;
     private int contract_number;
-    private ArrayList<Parking_place> occupied_places;
-    private ArrayList<String> registered_cars;
+    private ArrayList<ParkingPlace> occupiedPlaces;
+    private ArrayList<String> registeredCars;
 
-    public Contract( int contract_number, ArrayList<Parking_place> occupied_places, ArrayList<String> registered_cars) {
+    public Contract( int contract_number, ArrayList<ParkingPlace> occupied_places, ArrayList<String> registered_cars) {
 
-        for (Parking_place parking_place:occupied_places)
+        for (ParkingPlace parking_place:occupied_places)
         {
             if(parking_place.isIs_occupied() == true)
                 System.out.println("Cant create such a contract");
         }
-        this.client_id = UUID.randomUUID();
+        this.clientId = UUID.randomUUID();
         this.contract_number = contract_number;
-        for (Parking_place parking_place:occupied_places)
+        for (ParkingPlace parking_place:occupied_places)
         {
            parking_place.setIs_occupied(true);
         }
-        this.occupied_places = occupied_places;
-        this.registered_cars = registered_cars;
+        this.occupiedPlaces = occupied_places;
+        this.registeredCars = registered_cars;
     }
     public Contract()
     {
-        this.client_id =UUID.randomUUID();
+        this.clientId =UUID.randomUUID();
         this.contract_number = 0;
-
-        this.occupied_places =  new ArrayList<Parking_place>() ;
+        this.registeredCars = new ArrayList<String>();
+        this.occupiedPlaces =  new ArrayList<ParkingPlace>() ;
 
     }
 
     public UUID getClient_id() {
-        return client_id;
+        return clientId;
     }
 
     public int getContract_number() {
         return contract_number;
     }
 
-    public ArrayList<Parking_place> getOccupied_places() {
-        return occupied_places;
+    public ArrayList<ParkingPlace> getOccupied_places() {
+        return occupiedPlaces;
     }
 
     public ArrayList<String> getRegistered_cars() {
-        return registered_cars;
+        return registeredCars;
     }
 
-    public void setOccupied_places(ArrayList<Parking_place> occupied_places) {
-        this.occupied_places = occupied_places;
+    public void setOccupied_places(ArrayList<ParkingPlace> occupied_places) {
+        this.occupiedPlaces = occupied_places;
     }
 
     public void setRegistered_cars(ArrayList<String> registered_cars) {
-        this.registered_cars = registered_cars;
+        this.registeredCars = registered_cars;
     }
 
     @Override
     public String toString() {
         return "Contract{" +
-                "client_id=" + client_id +
+                "client_id=" + clientId +
                 ", contract_number=" + contract_number +
-                ", occupied_places=" + occupied_places +
-                ", registered_cars=" + registered_cars +
+                ", occupied_places=" + occupiedPlaces +
+                ", registered_cars=" + registeredCars +
                 '}';
     }
 }

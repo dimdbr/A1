@@ -1,36 +1,36 @@
 package com.company;
 
-public class Communal_worker extends Worker{
-    private CW_type type;
-    private boolean is_winter;
+public class CommunalWorker extends Worker{
+    private CWType type;
+    private boolean isWinter;
     private Malfunction malfunction;
 
-    public Communal_worker(String name, double salary, CW_type type, boolean is_winter) {
+    public CommunalWorker(String name, double salary, CWType type, boolean isWinter) {
         super(name, salary);
         this.type = type;
-        this.is_winter = is_winter;
+        this.isWinter = isWinter;
         this.malfunction = new Malfunction();
     }
 
-    public Communal_worker(CW_type type, boolean is_winter) {
+    public CommunalWorker(CWType type, boolean isWinter) {
         this.type = type;
-        this.is_winter = is_winter;
+        this.isWinter = isWinter;
         this.malfunction = new Malfunction();
     }
 
     public boolean get_is_winter() {
-        return is_winter;
+        return isWinter;
     }
 
     public void setIs_winter(boolean is_winter) {
-        this.is_winter = is_winter;
+        this.isWinter = isWinter;
     }
 
-    public Communal_worker(CW_type type) {
+    public CommunalWorker(CWType type) {
         this.type = type;
     }
 
-    public CW_type getType() {
+    public CWType getType() {
         return type;
     }
 
@@ -39,15 +39,12 @@ public class Communal_worker extends Worker{
     }
 
     public boolean isIs_winter() {
-        return is_winter;
+        return isWinter;
     }
 
     public Malfunction getMalfunction() {
         return malfunction;
     }
 
-    @Override
-    public void do_a_work() {
-        System.out.println("Doing communal job");
-    }
+
 }

@@ -1,6 +1,6 @@
 package com.company;
 
-public enum CW_type {
+public enum CWType {
     WATER,
     ELECTRICITY,
     GAS
