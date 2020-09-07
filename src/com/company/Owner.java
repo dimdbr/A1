@@ -9,6 +9,7 @@ public class Owner  {
         this.name = name;
         this.currentAccount = currentAccount;
     }
+
     Owner() {
         name = "";
         currentAccount = 0D;
@@ -23,20 +24,8 @@ public class Owner  {
     }
 
 
-    public void getMoney(double sum)
-    {
-        currentAccount+=sum;
-    }
-   /* public static Tariff change_tariff(Tariff tariff)
-    {
-    //..
-        return tariff;
-    }
 
-    public void change_tariff()
-    {
 
-    }*/
 
     @Override
     public String toString() {

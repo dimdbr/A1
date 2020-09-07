@@ -67,8 +67,6 @@ public class ContractServise {
         Contract contract = client.getContract();
         ArrayList<String> registered_cars  = contract.getRegistered_cars();
         registered_cars.add(car_number);
-
-
         contract.setRegistered_cars(registered_cars);
         client.setContract(contract);
     }
@@ -78,7 +76,6 @@ public class ContractServise {
         ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
         parking_places.remove(parking_place);
         parking_place.setIs_occupied(false);
-
         contract.setOccupied_places(parking_places);
         client.setContract(contract);
     }

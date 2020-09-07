@@ -21,12 +21,14 @@ public class Client {
         this.monthPay = monthPay;
         this.contract = contract;
     }
+
     public Client()
     {
         this.name = "";
         this.monthPay = 0;
 
     }
+
     public String getName() {
         return name;
     }

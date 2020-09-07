@@ -2,13 +2,14 @@ package com.company;
 
 public class Malfunction {
     private String malfName;
-
     private double fixPrice;
+
     public Malfunction()
     {
     this.malfName ="";
     this.fixPrice =0D;
     }
+
     public Malfunction(String malfName, double fixPrice) {
         this.malfName = malfName;
         this.fixPrice = fixPrice;

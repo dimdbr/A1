@@ -25,6 +25,7 @@ public class Contract {
         this.occupiedPlaces = occupied_places;
         this.registeredCars = registered_cars;
     }
+
     public Contract()
     {
         this.clientId =UUID.randomUUID();

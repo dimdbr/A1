@@ -39,7 +39,9 @@ public class ExpensesIncomeService {
             }
             generalFixPrice+=c_w.getMalfunction().getFixPrice();
         }
+
         paySum+=generalFixPrice/communalWorkers.size()+tariff.getElectricityTariff()+tariff.getGasTariff()+tariff.getWaterTariff()+tariff.getPlacePrice();
+
         for(Client client: clients)
         {
             client.setMonthPay(paySum);
@@ -51,6 +53,7 @@ public class ExpensesIncomeService {
         earnings+=clients.size()*clients.get(0).getMonthPay();
         for(CommunalWorker communalWorker:communalWorkers)
             earnings-=communalWorker.getSalary();
+
         return earnings;
     }
 

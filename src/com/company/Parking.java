@@ -9,6 +9,7 @@ public class Parking {
     private ArrayList<CommunalWorker> cWorkers;
     private ArrayList<Accountant> accountants;
     private  boolean open;
+
     Parking()
     {
         clients = null;
@@ -27,6 +28,7 @@ public class Parking {
         this.accountants = accountants;
         this.open = is_open;
     }
+
     public boolean is_open()
     {
         return open;
