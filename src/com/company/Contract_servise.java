@@ -10,6 +10,7 @@ public class Contract_servise {
     private Owner owner;
     private ArrayList<Client> clients;
     private ArrayList<Communal_worker>communal_workers;
+
     public Contract_servise(Owner owner, ArrayList<Client> clients,ArrayList<Communal_worker> communal_workers) {
         this.owner = owner;
         this.clients = clients;
@@ -59,6 +60,17 @@ public class Contract_servise {
         }
     }
 
+    public void add_client_car(Client client, String car_number)
+    {
+        Contract contract = client.getContract();
+        ArrayList<String> registered_cars  = contract.getRegistered_cars();
+        registered_cars.add(car_number);
+
+
+        contract.setRegistered_cars(registered_cars);
+        client.setContract(contract);
+    }
+
     public void remove_client_p_p(Client client, Parking_place parking_place) {
         Contract contract = client.getContract();
         ArrayList<Parking_place> parking_places = contract.getOccupied_places();
@@ -66,6 +78,15 @@ public class Contract_servise {
         parking_place.setIs_occupied(false);
 
         contract.setOccupied_places(parking_places);
+        client.setContract(contract);
+    }
+
+    public void remove_client_car(Client client, String car_number)
+    {
+        Contract contract = client.getContract();
+        ArrayList<String> registered_cars = contract.getRegistered_cars();
+        registered_cars.remove(car_number);
+        contract.setRegistered_cars(registered_cars);
         client.setContract(contract);
     }
 

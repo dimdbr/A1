@@ -9,13 +9,13 @@ public class Communal_worker extends Worker{
         super(name, salary);
         this.type = type;
         this.is_winter = is_winter;
-        this.malfunction = null;
+        this.malfunction = new Malfunction();
     }
 
     public Communal_worker(CW_type type, boolean is_winter) {
         this.type = type;
         this.is_winter = is_winter;
-        this.malfunction = null;
+        this.malfunction = new Malfunction();
     }
 
     public boolean get_is_winter() {

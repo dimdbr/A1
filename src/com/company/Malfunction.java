@@ -6,7 +6,8 @@ public class Malfunction {
     private double fix_price;
     public Malfunction()
     {
-
+    this.malf_name ="";
+    this.fix_price =0D;
     }
     public Malfunction(String malf_name, double fix_price) {
         this.malf_name = malf_name;

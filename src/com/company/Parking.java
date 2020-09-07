@@ -71,4 +71,8 @@ public class Parking {
     public void setOpen(boolean open) {
         this.open = open;
     }
+
+    public Owner getOwner() {
+        return owner;
+    }
 }

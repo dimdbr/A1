@@ -3,7 +3,7 @@ package com.company;
 public class Owner  {
     private String name;
     private double current_account;
-    private static Tariff tariff;
+
 
     public Owner(String name, double current_account) {
         this.name = name;
@@ -22,9 +22,7 @@ public class Owner  {
         return current_account;
     }
 
-    public void setSalary(double current_account) {
-        this.current_account = current_account;
-    }
+
     public void getMoney(double sum)
     {
         current_account+=sum;
@@ -47,4 +45,6 @@ public class Owner  {
                 ", current_account=" + current_account +
                 '}';
     }
+
+
 }

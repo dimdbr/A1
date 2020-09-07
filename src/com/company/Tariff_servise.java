@@ -27,9 +27,9 @@ public class Tariff_servise {
 
 
 
-    public Owner getOwner() {
+    /*public Owner getOwner() {
         return owner;
-    }
+    }*/
 
     public void change_tariff(double rent, double water, double electricity, double gas)
     {

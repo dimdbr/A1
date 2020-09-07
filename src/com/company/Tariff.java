@@ -10,6 +10,13 @@ public class Tariff {
     public Tariff() {
     }
 
+    public Tariff(double place_price, double water_tariff, double electricity_tariff, double gas_tariff) {
+        this.place_price = place_price;
+        this.water_tariff = water_tariff;
+        this.electricity_tariff = electricity_tariff;
+        this.gas_tariff = gas_tariff;
+    }
+
     public double getPlace_price() {
         return place_price;
     }

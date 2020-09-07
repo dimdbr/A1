@@ -14,6 +14,7 @@ public class Expenses_income_service {
         this.clients = clients;
         this.tariff = tariff;
     }
+
     public Expenses_income_service(Object object, ArrayList<Client> clients,ArrayList<Communal_worker> communal_workers,Tariff tariff) {
         if (object instanceof Accountant) {
             this.accountant = (Accountant) object;
@@ -44,5 +45,28 @@ public class Expenses_income_service {
             client.setMonth_pay(pay_sum);
         }
     }
+    public double ownerEarnings()
+    {
+        double earnings =0;
+        earnings+=clients.size()*clients.get(0).getMonth_pay();
+        for(Communal_worker communalWorker:communal_workers)
+            earnings-=communalWorker.getSalary();
+        return earnings;
+    }
 
+    public Accountant getAccountant() {
+        return accountant;
+    }
+
+    public ArrayList<Communal_worker> getCommunal_workers() {
+        return communal_workers;
+    }
+
+    public ArrayList<Client> getClients() {
+        return clients;
+    }
+
+    public Tariff getTariff() {
+        return tariff;
+    }
 }

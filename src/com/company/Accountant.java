@@ -20,10 +20,4 @@ public class Accountant extends Worker {
 
 
 
-    public  void calc_month_pay(ArrayList<Client> clients, Tariff tariff)
-    {
-
-
-    }
-
 }
