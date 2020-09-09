@@ -44,7 +44,7 @@ public class ExpensesIncomeService {
 
         for(Client client: clients)
         {
-            client.setMonthPay(paySum);
+            client.setMonthPay(paySum*client.getContract().getOccupied_places().size());
         }
     }
     public double ownerEarnings()

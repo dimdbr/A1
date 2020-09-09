@@ -23,8 +23,14 @@ public class Owner  {
         return currentAccount;
     }
 
+    public void setCurrentAccount(double currentAccount) {
+        this.currentAccount = currentAccount;
+    }
 
-
+    public void getMoney(double income)
+    {
+        this.setCurrentAccount(this.getSalary()+income);
+    }
 
 
     @Override

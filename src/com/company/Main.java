@@ -73,6 +73,7 @@ public class Main {
 
 	contractServise.add_client_car(cl1,"123");
 
+	contractServise.add_client_p_p(parking.getClients().get(1),new ParkingPlace(14,false,null));
 
 	System.out.println(owner);
 	owner.getMoney(expensesIncomeService.ownerEarnings());
@@ -80,7 +81,11 @@ public class Main {
 
 	for (Client client:parking.getClients())
 			System.out.println(client);
-    }
 
+		System.out.println("next billing");
+	expensesIncomeService.billing();
+		for (Client client:parking.getClients())
+			System.out.println(client);
+    }
 
 }
