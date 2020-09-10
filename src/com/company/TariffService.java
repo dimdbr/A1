@@ -2,16 +2,16 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class TariffServise {
+public final class TariffService {
     private Tariff tariff;
     private Owner owner;
 
-    public TariffServise(Tariff tariff, Owner owner) {
+    public TariffService(Tariff tariff, Owner owner) {
         this.tariff = tariff;
         this.owner = owner;
     }
 
-    public TariffServise(Object object, Tariff tariff) {
+    public TariffService(Object object, Tariff tariff) {
         if (object instanceof Owner) {
             this.owner = (Owner) object;
             this.tariff = tariff;

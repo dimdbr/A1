@@ -1,6 +1,6 @@
 package com.company;
 
-public class Tariff {
+public final class Tariff {
     private double placePrice;
     private  double waterTariff;
     private  double electricityTariff;

@@ -3,9 +3,9 @@ package com.company;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class Contract {
-    private UUID clientId;
-    private int contract_number;
+public final class Contract {
+    private final UUID clientId;
+    private final int contract_number;
     private ArrayList<ParkingPlace> occupiedPlaces;
     private ArrayList<String> registeredCars;
 
@@ -13,14 +13,14 @@ public class Contract {
 
         for (ParkingPlace parking_place:occupied_places)
         {
-            if(parking_place.isIs_occupied() == true)
+            if(parking_place.getIsOccupied() == true)
                 System.out.println("Cant create such a contract");
         }
         this.clientId = UUID.randomUUID();
         this.contract_number = contract_number;
         for (ParkingPlace parking_place:occupied_places)
         {
-           parking_place.setIs_occupied(true);
+           parking_place.setIsOccupied(true);
         }
         this.occupiedPlaces = occupied_places;
         this.registeredCars = registered_cars;

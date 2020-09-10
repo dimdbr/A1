@@ -1,6 +1,6 @@
 package com.company;
 
-public class CommunalWorker extends Worker{
+public final class CommunalWorker extends Worker{
     private CWType type;
     private boolean isWinter;
     private Malfunction malfunction;
@@ -18,11 +18,11 @@ public class CommunalWorker extends Worker{
         this.malfunction = new Malfunction();
     }
 
-    public boolean get_is_winter() {
+    public boolean getIsWinter() {
         return isWinter;
     }
 
-    public void setIs_winter(boolean is_winter) {
+    public void setIsWinter(boolean is_winter) {
         this.isWinter = isWinter;
     }
 
@@ -46,5 +46,12 @@ public class CommunalWorker extends Worker{
         return malfunction;
     }
 
-
+    @Override
+    public String toString() {
+        return "CommunalWorker{" +
+                "type=" + type +
+                ", isWinter=" + isWinter +
+                ", malfunction=" + malfunction +
+                '}';
+    }
 }

@@ -4,8 +4,8 @@ import java.lang.ref.Cleaner;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Client {
-    private String name;
+public final class Client {
+    private final String name;
     private Contract contract;
     private double monthPay;
 

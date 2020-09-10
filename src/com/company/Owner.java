@@ -1,6 +1,6 @@
 package com.company;
 
-public class Owner  {
+public final class  Owner  {
     private String name;
     private double currentAccount;
 

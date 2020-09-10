@@ -6,19 +6,19 @@ import java.awt.image.VolatileImage;
 import java.security.cert.CertificateParsingException;
 import java.util.ArrayList;
 
-public class ContractServise {
+public final class ContractService {
     private Owner owner;
     private ArrayList<Client> clients;
     private ArrayList<CommunalWorker>communalWorkers;
 
-    public ContractServise(Owner owner, ArrayList<Client> clients,ArrayList<CommunalWorker> communal_workers) {
+    public ContractService(Owner owner, ArrayList<Client> clients,ArrayList<CommunalWorker> communal_workers) {
         this.owner = owner;
         this.clients = clients;
         this.communalWorkers = communal_workers;
         System.out.println("Сознан сервис ");
     }
 
-    public ContractServise(Object object, ArrayList<Client> clients) {
+    public ContractService(Object object, ArrayList<Client> clients) {
         if (object instanceof Owner) {
             this.owner = (Owner) object;
             this.clients = clients;
@@ -47,9 +47,9 @@ public class ContractServise {
 
     public void add_client_p_p(Client client, ParkingPlace parking_place) {
         Contract contract = client.getContract();
-        if (parking_place.isIs_occupied()==false) {
+        if (parking_place.getIsOccupied()==false) {
             ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
-            parking_place.setIs_occupied(true);
+            parking_place.setIsOccupied(true);
             parking_places.add(parking_place);
             contract.setOccupied_places(parking_places);
             client.setContract(contract);
@@ -75,7 +75,7 @@ public class ContractServise {
         Contract contract = client.getContract();
         ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
         parking_places.remove(parking_place);
-        parking_place.setIs_occupied(false);
+        parking_place.setIsOccupied(false);
         contract.setOccupied_places(parking_places);
         client.setContract(contract);
     }
@@ -90,9 +90,13 @@ public class ContractServise {
     }
 
     public void collect_money() {
-        double income = 0;
+        double income;
+        income = 0;
         for (Client client : clients) {
-            income += client.getMonthPay() * client.getContract().getOccupied_places().size();
+            income += client.getMonthPay() *
+                    client.getContract().
+                            getOccupied_places().
+                            size();
         }
         for(CommunalWorker communal_worker:communalWorkers)
         {

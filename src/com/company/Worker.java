@@ -1,7 +1,7 @@
 package com.company;
 
 public class Worker {
-    private String name;
+    private  final String name;
     private double salary;
 
     Worker(String name, double salary) {

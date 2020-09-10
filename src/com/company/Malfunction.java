@@ -30,4 +30,12 @@ public class Malfunction {
     public void setFixPrice(double fixPrice) {
         this.fixPrice = fixPrice;
     }
+
+    @Override
+    public String toString() {
+        return "Malfunction{" +
+                "malfName='" + malfName + '\'' +
+                ", fixPrice=" + fixPrice +
+                '}';
+    }
 }

@@ -2,8 +2,8 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class ParkingPlace {
-    private int id_p_p;
+public  final class ParkingPlace {
+    private final int id_p_p;
     private boolean isOccupied;
     private Client placeOwner;
 
@@ -26,11 +26,11 @@ public class ParkingPlace {
         this.placeOwner = new Client();
     }
 
-    public int getId_p_p() {
+    public int getPackingPlaceId() {
         return id_p_p;
     }
 
-    public boolean isIs_occupied() {
+    public boolean getIsOccupied() {
         return isOccupied;
     }
 
@@ -38,7 +38,7 @@ public class ParkingPlace {
         return placeOwner;
     }
 
-    public void setIs_occupied(boolean isOccupied) {
+    public void setIsOccupied(boolean isOccupied) {
         this.isOccupied = isOccupied;
     }
 

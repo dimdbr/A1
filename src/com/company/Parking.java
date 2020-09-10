@@ -2,10 +2,10 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class Parking {
+public  final class Parking {
     private ArrayList<Client> clients;
     private ArrayList<ParkingPlace> parkingPlaces;
-    private Owner owner;
+    private  final Owner owner;
     private ArrayList<CommunalWorker> cWorkers;
     private ArrayList<Accountant> accountants;
     private  boolean open;
