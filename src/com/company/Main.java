@@ -41,7 +41,9 @@ public class Main {
 
 	parking_places_for_test.add(p_p_1);
 	parking_places_for_test.add(p_p_2);
-	System.out.println(parking_places_for_test);
+	System.out.println(p_p_1);
+		System.out.println(p_p_2);
+		System.out.println(p_p_3);
 
 		System.out.println("создаем клиентов\n");
 	Client cl1= new Client("client 1",1235);
