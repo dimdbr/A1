@@ -1,7 +1,7 @@
 package com.company;
 
 public final class CommunalWorker extends Worker{
-    private CWType type;
+    private final CWType type;
     private boolean isWinter;
     private Malfunction malfunction;
 

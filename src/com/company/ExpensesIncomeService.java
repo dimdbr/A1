@@ -62,9 +62,9 @@ public  final class ExpensesIncomeService {
         for(Client client: clients)
         {
             client.setMonthPay(paySum*
-                    client.getContract().
-                            getOccupied_places().
-                            size());
+                    client.getContract()
+                            .getOccupied_places()
+                            .size());
         }
     }
 
@@ -81,9 +81,7 @@ public  final class ExpensesIncomeService {
         return earnings;
     }
 
-    public Accountant getAccountant() {
-        return accountant;
-    }
+
 
     public ArrayList<CommunalWorker> getCommunal_workers() {
         return communalWorkers;
@@ -93,7 +91,5 @@ public  final class ExpensesIncomeService {
         return clients;
     }
 
-    public Tariff getTariff() {
-        return tariff;
-    }
+
 }

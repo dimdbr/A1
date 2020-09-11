@@ -49,7 +49,7 @@ public final class ContractService {
         Contract contract = client.getContract();
         if (parking_place.getIsOccupied()==false) {
             ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
-            parking_place.setIsOccupied(true);
+            parking_place.setIsOccupied();
             parking_places.add(parking_place);
             contract.setOccupied_places(parking_places);
             client.setContract(contract);
@@ -75,7 +75,7 @@ public final class ContractService {
         Contract contract = client.getContract();
         ArrayList<ParkingPlace> parking_places = contract.getOccupied_places();
         parking_places.remove(parking_place);
-        parking_place.setIsOccupied(false);
+        parking_place.setNotOccupied();
         contract.setOccupied_places(parking_places);
         client.setContract(contract);
     }
@@ -94,9 +94,9 @@ public final class ContractService {
         income = 0;
         for (Client client : clients) {
             income += client.getMonthPay() *
-                    client.getContract().
-                            getOccupied_places().
-                            size();
+                      client.getContract()
+                            .getOccupied_places()
+                            .size();
         }
         for(CommunalWorker communal_worker:communalWorkers)
         {

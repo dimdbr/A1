@@ -38,8 +38,12 @@ public  final class ParkingPlace {
         return placeOwner;
     }
 
-    public void setIsOccupied(boolean isOccupied) {
-        this.isOccupied = isOccupied;
+    public void setIsOccupied() {
+        this.isOccupied = true;
+    }
+    public void setNotOccupied()
+    {
+        this.isOccupied= false;
     }
 
     public void setPlaceOwner(Client v) {

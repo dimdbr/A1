@@ -20,7 +20,7 @@ public final class Contract {
         this.contract_number = contract_number;
         for (ParkingPlace parking_place:occupied_places)
         {
-           parking_place.setIsOccupied(true);
+           parking_place.setIsOccupied();
         }
         this.occupiedPlaces = occupied_places;
         this.registeredCars = registered_cars;

@@ -8,7 +8,7 @@ public  final class Parking {
     private  final Owner owner;
     private ArrayList<CommunalWorker> cWorkers;
     private ArrayList<Accountant> accountants;
-    private  boolean open;
+    private boolean open;
 
     Parking()
     {
@@ -70,8 +70,8 @@ public  final class Parking {
         return open;
     }
 
-    public void setOpen(boolean open) {
-        this.open = open;
+    public void setOpen() {
+        this.open = true;
     }
 
     public Owner getOwner() {
